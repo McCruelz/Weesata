@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weesata - Jelajahi Pesona Wisata Lokal Indonesia</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/home.css">
+  <link rel="stylesheet" href="styles/pages/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-fixed">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Weesata</h1>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="search.html">Destinasi</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Bantuan</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-profile" id="userProfileMenu">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="User Profile">
+            <span>Budi Santoso</span>
+            <span class="icon-dropdown"></span>
+            
+            <div class="dropdown-menu">
+              <a href="dashboard.html" class="dropdown-item active">
+                <span class="icon-dashboard"></span>
+                Dashboard
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-ticket"></span>
+                Tiket Saya
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-heart"></span>
+                Wishlist
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-settings"></span>
+                Pengaturan
+              </a>
+              <a href="index.html" class="dropdown-item logout">
+                <span class="icon-logout"></span>
+                Keluar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Jelajahi Pesona Wisata Lokal Indonesia</h2>
+      <p>Temukan keindahan tersembunyi di Nusantara</p>
+      
+      <div class="search-container">
+        <div class="search-box">
+          <div class="search-group">
+            <label for="destination">Destinasi</label>
+            <input type="text" id="destination" placeholder="Cari tempat wisata...">
+          </div>
+          <div class="search-group">
+            <label for="date">Tanggal Perjalanan</label>
+            <input type="date" id="date">
+          </div>
+          <div class="search-group">
+            <label for="people">Jumlah Orang</label>
+            <select id="people">
+              <option value="1">1 Orang</option>
+              <option value="2" selected>2 Orang</option>
+              <option value="3">3 Orang</option>
+              <option value="4">4 Orang</option>
+              <option value="5">5+ Orang</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-search">Cari Wisata</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Kenapa Memilih Weesata?</h2>
+        <p>Beragam kemudahan untuk perjalananmu</p>
+      </div>
+      
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/feature-1.svg" alt="Kurasi Destinasi">
+          </div>
+          <h3>Kurasi Destinasi Lokal</h3>
+          <p>Kami memilih destinasi terbaik dengan standar kenyamanan dan keaslian pengalaman lokal.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/feature-2.svg" alt="Eksplorasi Berdasarkan Minat">
+          </div>
+          <h3>Eksplorasi Berdasarkan Minat</h3>
+          <p>Temukan wisata yang sesuai dengan minat dan preferensi perjalananmu.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/feature-3.svg" alt="Pesan Tiket">
+          </div>
+          <h3>Pesan Tiket Lebih Cepat</h3>
+          <p>Proses pemesanan yang cepat dan aman dengan konfirmasi instan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section class="recommendations">
+    <div class="container">
+      <div class="section-header">
+        <h2>Rekomendasi Untuk Kamu</h2>
+        <p>Destinasi populer dan promo spesial</p>
+      </div>
+      
+      <div class="carousel-container">
+        <div class="carousel-wrapper" id="recommendationsCarousel">
+          <div class="carousel-item">
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg" alt="Raja Ampat">
+                <span class="price">Mulai Rp 2.500.000</span>
+              </div>
+              <div class="destination-info">
+                <h3>Raja Ampat</h3>
+                <p class="location">Papua Barat</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(120)</span>
+                </div>
+                <a href="detail.html" class="btn btn-outline">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg" alt="Bromo">
+                <span class="price">Mulai Rp 850.000</span>
+              </div>
+              <div class="destination-info">
+                <h3>Gunung Bromo</h3>
+                <p class="location">Jawa Timur</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="count">(98)</span>
+                </div>
+                <a href="detail.html" class="btn btn-outline">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="https://images.pexels.com/photos/31660323/pexels-photo-31660323/free-photo-of-arsitektur-tradisional-korea-di-seoul-modern.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Bali">
+                <span class="price">Mulai Rp 1.200.000</span>
+              </div>
+              <div class="destination-info">
+                <h3>Pantai Kuta</h3>
+                <p class="location">Bali</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="count">(245)</span>
+                </div>
+                <a href="detail.html" class="btn btn-outline">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg" alt="Dieng">
+                <span class="price">Mulai Rp 750.000</span>
+              </div>
+              <div class="destination-info">
+                <h3>Dataran Tinggi Dieng</h3>
+                <p class="location">Jawa Tengah</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="count">(78)</span>
+                </div>
+                <a href="detail.html" class="btn btn-outline">Lihat Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="carousel-controls">
+          <button id="prevBtn" class="carousel-control prev">&lt;</button>
+          <button id="nextBtn" class="carousel-control next">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Eksplorasi Berdasarkan Kategori</h2>
+        <p>Pilih pengalaman wisata sesuai minatmu</p>
+      </div>
+      
+      <div class="category-items">
+        <div class="category-item">
+          <div class="category-icon">
+            <img src="images/category-nature.svg" alt="Alam">
+          </div>
+          <h3>Alam</h3>
+        </div>
+        
+        <div class="category-item">
+          <div class="category-icon">
+            <img src="images/category-culture.svg" alt="Budaya">
+          </div>
+          <h3>Budaya</h3>
+        </div>
+        
+        <div class="category-item">
+          <div class="category-icon">
+            <img src="images/category-culinary.svg" alt="Kuliner">
+          </div>
+          <h3>Kuliner</h3>
+        </div>
+        
+        <div class="category-item">
+          <div class="category-icon">
+            <img src="images/category-adventure.svg" alt="Petualangan">
+          </div>
+          <h3>Petualangan</h3>
+        </div>
+      </div>
+      
+      <div class="view-all">
+        <a href="search.html" class="btn btn-secondary">Lihat Semua</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Apa Kata Mereka</h2>
+        <p>Pengalaman dari para penjelajah Weesata</p>
+      </div>
+      
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Dewi Sartika">
+            <div class="testimonial-name">
+              <h4>Dewi Sartika</h4>
+              <p>Jakarta</p>
+            </div>
+          </div>
+          <p>"Berkat Weesata, perjalanan ke Raja Ampat jadi lebih mudah direncanakan. Semua informasi lengkap dan pemesanan tiket sangat cepat!"</p>
+          <div class="testimonial-rating">
+            <span>★★★★★</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="Budi Santoso">
+            <div class="testimonial-name">
+              <h4>Budi Santoso</h4>
+              <p>Surabaya</p>
+            </div>
+          </div>
+          <p>"Saya menemukan banyak tempat wisata tersembunyi yang tidak pernah saya dengar sebelumnya. Pelayanan customer service juga sangat responsif."</p>
+          <div class="testimonial-rating">
+            <span>★★★★☆</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Siti Nurhaliza">
+            <div class="testimonial-name">
+              <h4>Siti Nurhaliza</h4>
+              <p>Bandung</p>
+            </div>
+          </div>
+          <p>"Promo-promo di Weesata sangat menguntungkan! Saya bisa menghemat budget liburan ke Bali hampir 30%. Pasti akan pesan lagi di sini."</p>
+          <div class="testimonial-rating">
+            <span>★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Dapatkan Inspirasi & Promo Terbaru</h2>
+        <p>Berlangganan newsletter kami untuk mendapatkan update destinasi terbaru dan promo eksklusif</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Masukkan email Anda">
+          <button class="btn btn-primary">Berlangganan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-company">
+          <h3>Weesata</h3>
+          <p>Platform digital untuk eksplorasi dan pemesanan wisata lokal di Indonesia.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="icon-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-link-group">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Destinasi Wisata</a></li>
+              <li><a href="#">Panduan Wisata</a></li>
+              <li><a href="#">Program Afiliasi</a></li>
+              <li><a href="#">Mitra Bisnis</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Bantuan</h4>
+            <ul>
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontak Kami</a></li>
+              <li><a href="#">Pembatalan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Weesata.com. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>

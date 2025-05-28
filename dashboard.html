@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Saya - Weesata</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-fixed">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Weesata</h1>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="search.html">Destinasi</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Bantuan</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-profile" id="userProfileMenu">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="User Profile">
+            <span>Budi Santoso</span>
+            <span class="icon-dropdown"></span>
+            
+            <div class="dropdown-menu">
+              <a href="dashboard.html" class="dropdown-item active">
+                <span class="icon-dashboard"></span>
+                Dashboard
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-ticket"></span>
+                Tiket Saya
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-heart"></span>
+                Wishlist
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-settings"></span>
+                Pengaturan
+              </a>
+              <a href="index.html" class="dropdown-item logout">
+                <span class="icon-logout"></span>
+                Keluar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Page Content -->
+  <main class="dashboard-page">
+    <div class="container">
+      <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+          <div class="user-info">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="Budi Santoso" class="user-avatar">
+            <div class="user-details">
+              <h3>Budi Santoso</h3>
+              <p>Member sejak Juni 2025</p>
+            </div>
+          </div>
+          
+          <nav class="dashboard-nav">
+            <ul>
+              <li class="active">
+                <a href="#" data-target="upcoming-trips">
+                  <span class="icon-ticket"></span>
+                  Perjalanan Mendatang
+                </a>
+              </li>
+              <li>
+                <a href="#" data-target="trip-history">
+                  <span class="icon-history"></span>
+                  Riwayat Perjalanan
+                </a>
+              </li>
+              <li>
+                <a href="#" data-target="wishlist">
+                  <span class="icon-heart"></span>
+                  Wishlist
+                </a>
+              </li>
+              <li>
+                <a href="#" data-target="profile">
+                  <span class="icon-user"></span>
+                  Profil Saya
+                </a>
+              </li>
+              <li>
+                <a href="#" data-target="settings">
+                  <span class="icon-settings"></span>
+                  Pengaturan Akun
+                </a>
+              </li>
+            </ul>
+          </nav>
+          
+          <div class="dashboard-help">
+            <h4>Butuh bantuan?</h4>
+            <a href="#" class="help-link">
+              <span class="icon-support"></span>
+              Hubungi Kami
+            </a>
+          </div>
+        </aside>
+        
+        <!-- Content Area -->
+        <div class="dashboard-content">
+          <!-- Upcoming Trips Section -->
+          <div class="dashboard-section active" id="upcoming-trips">
+            <div class="section-header">
+              <h2>Perjalanan Mendatang</h2>
+            </div>
+            
+            <div class="trip-cards">
+              <div class="trip-card">
+                <img src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg" alt="Raja Ampat" class="trip-image">
+                <div class="trip-details">
+                  <h3>Raja Ampat</h3>
+                  <div class="trip-meta">
+                    <div class="trip-date">
+                      <span class="icon-calendar"></span>
+                      <span>15 - 17 Juni 2025</span>
+                    </div>
+                    <div class="trip-guests">
+                      <span class="icon-users"></span>
+                      <span>2 Orang</span>
+                    </div>
+                  </div>
+                  <div class="trip-package">Paket: Standar (3 hari 2 malam)</div>
+                  <div class="trip-status active">Dikonfirmasi</div>
+                  <div class="trip-actions">
+                    <button class="btn btn-sm btn-primary">Lihat Tiket</button>
+                    <button class="btn btn-sm btn-secondary">Detail</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="trip-card">
+                <img src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="Danau Toba" class="trip-image">
+                <div class="trip-details">
+                  <h3>Danau Toba</h3>
+                  <div class="trip-meta">
+                    <div class="trip-date">
+                      <span class="icon-calendar"></span>
+                      <span>10 - 12 Juli 2025</span>
+                    </div>
+                    <div class="trip-guests">
+                      <span class="icon-users"></span>
+                      <span>4 Orang</span>
+                    </div>
+                  </div>
+                  <div class="trip-package">Paket: Premium (3 hari 2 malam)</div>
+                  <div class="trip-status pending">Menunggu Pembayaran</div>
+                  <div class="trip-actions">
+                    <button class="btn btn-sm btn-primary">Bayar Sekarang</button>
+                    <button class="btn btn-sm btn-secondary">Detail</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="empty-state" style="display: none;">
+              <div class="empty-icon">
+                <img src="images/empty-trips.svg" alt="Tidak ada perjalanan">
+              </div>
+              <h3>Belum ada perjalanan yang direncanakan</h3>
+              <p>Yuk, mulai rencanakan perjalanan wisatamu!</p>
+              <a href="search.html" class="btn btn-primary">Cari Destinasi</a>
+            </div>
+          </div>
+          
+          <!-- Trip History Section -->
+          <div class="dashboard-section" id="trip-history" style="display: none;">
+            <div class="section-header">
+              <h2>Riwayat Perjalanan</h2>
+            </div>
+            
+            <div class="trip-cards">
+              <div class="trip-card">
+                <img src="https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg" alt="Gunung Bromo" class="trip-image">
+                <div class="trip-details">
+                  <h3>Gunung Bromo</h3>
+                  <div class="trip-meta">
+                    <div class="trip-date">
+                      <span class="icon-calendar"></span>
+                      <span>5 - 7 Mei 2025</span>
+                    </div>
+                    <div class="trip-guests">
+                      <span class="icon-users"></span>
+                      <span>2 Orang</span>
+                    </div>
+                  </div>
+                  <div class="trip-package">Paket: Standar (3 hari 2 malam)</div>
+                  <div class="trip-status completed">Selesai</div>
+                  <div class="trip-actions">
+                    <button class="btn btn-sm btn-primary">Lihat Tiket</button>
+                    <button class="btn btn-sm btn-secondary">Beri Ulasan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Profile Section -->
+          <div class="dashboard-section" id="profile" style="display: none;">
+            <div class="section-header">
+              <h2>Profil Saya</h2>
+              <button class="btn btn-primary btn-edit-profile">Edit Profil</button>
+            </div>
+            
+            <div class="profile-content">
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="profile-avatar">
+                    <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="Budi Santoso">
+                    <button class="btn-change-avatar">Ubah Foto</button>
+                  </div>
+                  <div class="profile-info">
+                    <h3>Budi Santoso</h3>
+                    <p>budioke@email.com</p>
+                    <p>+62 812-3456-7890</p>
+                  </div>
+                </div>
+                
+                <div class="profile-body">
+                  <div class="profile-section">
+                    <h4>Informasi Pribadi</h4>
+                    <div class="profile-row">
+                      <div class="profile-field">
+                        <label>Nama Lengkap</label>
+                        <p>Budi Santoso</p>
+                      </div>
+                      <div class="profile-field">
+                        <label>Jenis Kelamin</label>
+                        <p>Laki-laki</p>
+                      </div>
+                    </div>
+                    <div class="profile-row">
+                      <div class="profile-field">
+                        <label>Tanggal Lahir</label>
+                        <p>15 April 1990</p>
+                      </div>
+                      <div class="profile-field">
+                        <label>Nomor KTP</label>
+                        <p>3578***********</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="profile-section">
+                    <h4>Informasi Kontak</h4>
+                    <div class="profile-row">
+                      <div class="profile-field">
+                        <label>Email</label>
+                        <p>budioke@email.com</p>
+                      </div>
+                      <div class="profile-field">
+                        <label>Nomor Telepon</label>
+                        <p>+62 812-3456-7890</p>
+                      </div>
+                    </div>
+                    <div class="profile-row">
+                      <div class="profile-field full-width">
+                        <label>Alamat</label>
+                        <p>Jl. Raya Kuta No. 123, Kuta, Badung, Bali 80361</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="profile-section">
+                    <h4>Preferensi Perjalanan</h4>
+                    <div class="profile-tags">
+                      <span class="profile-tag">Alam</span>
+                      <span class="profile-tag">Petualangan</span>
+                      <span class="profile-tag">Pantai</span>
+                      <span class="profile-tag">Gunung</span>
+                      <span class="profile-tag">Kuliner</span>
+                      <button class="btn-add-tag">+ Tambah</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-company">
+          <h3>Weesata</h3>
+          <p>Platform digital untuk eksplorasi dan pemesanan wisata lokal di Indonesia.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="icon-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-link-group">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Destinasi Wisata</a></li>
+              <li><a href="#">Panduan Wisata</a></li>
+              <li><a href="#">Program Afiliasi</a></li>
+              <li><a href="#">Mitra Bisnis</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Bantuan</h4>
+            <ul>
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontak Kami</a></li>
+              <li><a href="#">Pembatalan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Weesata.com. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+</body>
+</html>

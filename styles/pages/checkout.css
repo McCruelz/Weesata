@@ -1,0 +1,478 @@
+/* Checkout Page Specific Styles */
+
+/* Checkout Layout */
+.checkout-page {
+  padding-top: var(--spacing-lg);
+}
+
+.checkout-header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.checkout-header h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--spacing-xl);
+}
+
+/* Form Section */
+.form-section {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-section h2 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.participant-form {
+  background-color: var(--color-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.participant-form h4 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+/* Payment Section */
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.payment-method {
+  position: relative;
+  flex: 1;
+}
+
+.payment-method input[type="radio"] {
+  display: none;
+}
+
+.payment-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.payment-method input[type="radio"]:checked + .payment-label {
+  border-color: var(--color-primary);
+  background-color: rgba(79, 182, 222, 0.05);
+}
+
+.payment-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.payment-details {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.payment-details h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.125rem;
+}
+
+.bank-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.bank-account {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-light);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+}
+
+.bank-account img {
+  width: 40px;
+  height: 40px;
+  margin-right: var(--spacing-sm);
+  object-fit: contain;
+}
+
+.account-details {
+  flex: 1;
+}
+
+.account-name {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xxs);
+}
+
+.account-number {
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+}
+
+.copy-btn {
+  margin-left: var(--spacing-sm);
+}
+
+.payment-deadline {
+  background-color: rgba(249, 168, 37, 0.1);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  margin-top: var(--spacing-md);
+}
+
+.payment-deadline p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.deadline {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-warning);
+  margin-top: var(--spacing-xxs);
+}
+
+/* Confirmation Section */
+.success-message {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-success);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.e-ticket {
+  background-color: var(--color-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  margin: var(--spacing-lg) 0;
+  text-align: left;
+  border: 1px dashed var(--color-gray);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.ticket-header h3 {
+  margin-bottom: 0;
+}
+
+.booking-id {
+  font-size: 0.875rem;
+  color: var(--color-gray-dark);
+}
+
+.ticket-qr {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-md) 0;
+}
+
+.qr-placeholder {
+  text-align: center;
+}
+
+.qr-box {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--spacing-sm);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.qr-box::before, .qr-box::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-black);
+}
+
+.qr-box::before {
+  width: 80%;
+  height: 1px;
+}
+
+.qr-box::after {
+  width: 1px;
+  height: 80%;
+}
+
+.qr-placeholder p {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.ticket-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-item .label {
+  font-size: 0.75rem;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.ticket-item .value {
+  font-weight: var(--font-weight-medium);
+}
+
+.next-steps {
+  text-align: left;
+  margin: var(--spacing-lg) 0;
+}
+
+.next-steps h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.125rem;
+}
+
+.next-steps ol {
+  padding-left: var(--spacing-md);
+}
+
+.next-steps li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+/* Summary Card */
+.checkout-summary {
+  align-self: flex-start;
+}
+
+.summary-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.summary-card h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.booking-info {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.destination-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  margin-right: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.booking-details h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xxs);
+}
+
+.booking-location {
+  color: var(--color-gray-dark);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.booking-package,
+.booking-date,
+.booking-guests {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xxs);
+}
+
+.price-breakdown {
+  margin-bottom: var(--spacing-lg);
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.price-item.discount {
+  color: var(--color-success);
+  margin-bottom: var(--spacing-md);
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-gray-light);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.125rem;
+}
+
+.promo-code {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+}
+
+.promo-code input {
+  flex: 1;
+  border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+  border-right: none;
+}
+
+.promo-code button {
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.checkout-actions {
+  margin-bottom: var(--spacing-md);
+}
+
+.summary-note {
+  font-size: 0.75rem;
+  color: var(--color-gray-dark);
+  text-align: center;
+}
+
+.assistance-box {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.assistance-box h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.assistance-box p {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+}
+
+.contact-link span {
+  margin-right: var(--spacing-xxs);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkout-form-container {
+    order: 2;
+  }
+  
+  .checkout-summary {
+    order: 1;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .summary-card {
+    position: relative;
+    top: 0;
+  }
+  
+  .payment-options {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .payment-label {
+    flex-direction: row;
+  }
+  
+  .payment-icon {
+    margin-right: var(--spacing-sm);
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .confirmation-actions {
+    flex-direction: column;
+  }
+  
+  .ticket-details {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja Ampat - Weesata</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/dashboard.css">
+  <link rel="stylesheet" href="styles/pages/detail.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-fixed">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Weesata</h1>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="search.html">Destinasi</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Bantuan</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-profile" id="userProfileMenu">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="User Profile">
+            <span>Budi Santoso</span>
+            <span class="icon-dropdown"></span>
+            
+            <div class="dropdown-menu">
+              <a href="dashboard.html" class="dropdown-item active">
+                <span class="icon-dashboard"></span>
+                Dashboard
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-ticket"></span>
+                Tiket Saya
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-heart"></span>
+                Wishlist
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-settings"></span>
+                Pengaturan
+              </a>
+              <a href="index.html" class="dropdown-item logout">
+                <span class="icon-logout"></span>
+                Keluar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Detail Page Content -->
+  <main class="detail-page">
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="gallery-container">
+        <div class="main-image">
+          <img src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg" alt="Raja Ampat" id="mainImage">
+        </div>
+        <div class="thumbnail-images">
+          <img src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg" alt="Raja Ampat 1" class="active" onclick="changeMainImage(this.src)">
+          <img src="https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg" alt="Raja Ampat 2" onclick="changeMainImage(this.src)">
+          <img src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg" alt="Raja Ampat 3" onclick="changeMainImage(this.src)">
+          <img src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg" alt="Raja Ampat 4" onclick="changeMainImage(this.src)">
+          <img src="https://images.pexels.com/photos/2080960/pexels-photo-2080960.jpeg" alt="Raja Ampat 5" onclick="changeMainImage(this.src)">
+        </div>
+      </div>
+    </section>
+    
+    <div class="container">
+      <div class="detail-content">
+        <!-- Left Column: Information -->
+        <div class="detail-info">
+          <div class="detail-header">
+            <h1>Raja Ampat</h1>
+            <div class="detail-meta">
+              <div class="location">
+                <span class="icon-location"></span>
+                <span>Papua Barat, Indonesia</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="count">(120 ulasan)</span>
+              </div>
+              <div class="category-tag">Alam</div>
+            </div>
+          </div>
+          
+          <div class="detail-description">
+            <h2>Tentang Destinasi</h2>
+            <p>Raja Ampat adalah sebuah kabupaten yang terletak di Provinsi Papua Barat, Indonesia. Kabupaten ini memiliki empat pulau utama yaitu Pulau Waigeo, Pulau Batanta, Pulau Salawati, dan Pulau Misool, serta terdiri dari lebih dari 1.500 pulau-pulau kecil.</p>
+            <p>Raja Ampat dikenal dengan keindahan bawah lautnya yang menakjubkan. Destinasi ini menawarkan pengalaman snorkeling dan diving yang luar biasa dengan lebih dari 1.070 spesies ikan, 540 jenis karang keras atau sekitar 75% dari jumlah total jenis karang di dunia, dan 700 jenis moluska.</p>
+            <p>Selain wisata bawah laut, Raja Ampat juga menawarkan keindahan pantai, perbukitan, laguna, dan hutan mangrove yang masih sangat asri dan alami.</p>
+          </div>
+          
+          <div class="detail-facilities">
+            <h2>Fasilitas & Aktivitas</h2>
+            <div class="facilities-list">
+              <div class="facility-item">
+                <span class="icon-snorkeling"></span>
+                <span>Snorkeling</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-diving"></span>
+                <span>Diving</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-island-hopping"></span>
+                <span>Island Hopping</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-kayaking"></span>
+                <span>Kayaking</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-accommodation"></span>
+                <span>Penginapan</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-restaurant"></span>
+                <span>Restoran</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-transportation"></span>
+                <span>Transportasi</span>
+              </div>
+              <div class="facility-item">
+                <span class="icon-guide"></span>
+                <span>Pemandu Wisata</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="detail-reviews">
+            <div class="reviews-header">
+              <h2>Ulasan Pengunjung</h2>
+              <a href="#" class="view-all-reviews">Lihat Semua</a>
+            </div>
+            
+            <div class="review-summary">
+              <div class="review-average">
+                <span class="big-rating">4.8</span>
+                <div class="stars">★★★★★</div>
+                <span class="total-reviews">120 ulasan</span>
+              </div>
+              <div class="review-bars">
+                <div class="review-bar">
+                  <span class="rating-label">5 <span class="star">★</span></span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 85%;"></div>
+                  </div>
+                  <span class="rating-count">102</span>
+                </div>
+                <div class="review-bar">
+                  <span class="rating-label">4 <span class="star">★</span></span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 10%;"></div>
+                  </div>
+                  <span class="rating-count">12</span>
+                </div>
+                <div class="review-bar">
+                  <span class="rating-label">3 <span class="star">★</span></span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 4%;"></div>
+                  </div>
+                  <span class="rating-count">5</span>
+                </div>
+                <div class="review-bar">
+                  <span class="rating-label">2 <span class="star">★</span></span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 0.8%;"></div>
+                  </div>
+                  <span class="rating-count">1</span>
+                </div>
+                <div class="review-bar">
+                  <span class="rating-label">1 <span class="star">★</span></span>
+                  <div class="bar-container">
+                    <div class="bar" style="width: 0%;"></div>
+                  </div>
+                  <span class="rating-count">0</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="review-list">
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-user">
+                    <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Dewi Sartika">
+                    <div class="review-user-info">
+                      <h4>Dewi Sartika</h4>
+                      <span class="review-date">Juli 2025</span>
+                    </div>
+                  </div>
+                  <div class="review-rating">
+                    <span class="stars">★★★★★</span>
+                  </div>
+                </div>
+                <p class="review-text">"Pemandangan bawah laut Raja Ampat luar biasa indah! Saya melihat berbagai jenis ikan dan terumbu karang yang warna-warni. Pengalaman snorkeling terbaik sepanjang hidup saya. Guide-nya juga ramah dan profesional."</p>
+              </div>
+              
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-user">
+                    <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="Budi Santoso">
+                    <div class="review-user-info">
+                      <h4>Budi Santoso</h4>
+                      <span class="review-date">Juni 2025</span>
+                    </div>
+                  </div>
+                  <div class="review-rating">
+                    <span class="stars">★★★★★</span>
+                  </div>
+                </div>
+                <p class="review-text">"Pengalaman diving di Raja Ampat sangat memuaskan. Air lautnya jernih dan visibility-nya tinggi. Banyak spot menarik yang bisa dijelajahi. Penginapan juga nyaman dengan pemandangan laut yang indah. Sangat recommended!"</p>
+              </div>
+              
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="review-user">
+                    <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Siti Nurhaliza">
+                    <div class="review-user-info">
+                      <h4>Siti Nurhaliza</h4>
+                      <span class="review-date">Mei 2025</span>
+                    </div>
+                  </div>
+                  <div class="review-rating">
+                    <span class="stars">★★★★☆</span>
+                  </div>
+                </div>
+                <p class="review-text">"Saya dan keluarga sangat menikmati perjalanan ke Raja Ampat. Pemandangannya indah dan aktivitasnya menyenangkan. Yang kurang hanya fasilitas transportasi lokalnya yang masih bisa ditingkatkan. Tapi secara keseluruhan, kami sangat puas!"</p>
+              </div>
+            </div>
+            
+            <button class="btn btn-secondary btn-load-more">Muat Ulasan Lainnya</button>
+          </div>
+        </div>
+        
+        <!-- Right Column: Booking -->
+        <div class="detail-booking">
+          <div class="booking-card">
+            <div class="booking-price">
+              <h3>Mulai dari</h3>
+              <div class="price">Rp 2.500.000</div>
+              <p class="price-info">per orang (min. 2 orang)</p>
+            </div>
+            
+            <div class="booking-form">
+              <div class="form-group">
+                <label for="bookingDate">Tanggal Perjalanan</label>
+                <input type="date" id="bookingDate" min="2025-06-01">
+              </div>
+              
+              <div class="form-group">
+                <label for="bookingPeople">Jumlah Orang</label>
+                <select id="bookingPeople">
+                  <option value="1">1 Orang</option>
+                  <option value="2" selected>2 Orang</option>
+                  <option value="3">3 Orang</option>
+                  <option value="4">4 Orang</option>
+                  <option value="5">5 Orang</option>
+                  <option value="6+">6+ Orang</option>
+                </select>
+              </div>
+              
+              <div class="form-group package-selection">
+                <label>Pilih Paket</label>
+                <div class="package-options">
+                  <label class="package-option">
+                    <input type="radio" name="package" value="standard" checked>
+                    <div class="package-card">
+                      <h4>Standar</h4>
+                      <ul>
+                        <li>3 hari 2 malam</li>
+                        <li>Snorkeling</li>
+                        <li>Island Hopping</li>
+                        <li>Transportasi</li>
+                      </ul>
+                      <div class="package-price">Rp 2.500.000</div>
+                    </div>
+                  </label>
+                  
+                  <label class="package-option">
+                    <input type="radio" name="package" value="premium">
+                    <div class="package-card">
+                      <h4>Premium</h4>
+                      <ul>
+                        <li>5 hari 4 malam</li>
+                        <li>Diving</li>
+                        <li>Island Hopping</li>
+                        <li>Transportasi</li>
+                        <li>Fotografi Underwater</li>
+                      </ul>
+                      <div class="package-price">Rp 4.200.000</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="booking-total">
+                <div class="total-label">Total:</div>
+                <div class="total-price">Rp 5.000.000</div>
+              </div>
+              
+              <button class="btn btn-primary btn-block" onclick="location.href='checkout.html'">Pesan Sekarang</button>
+            </div>
+            
+            <div class="booking-features">
+              <div class="feature-item">
+                <span class="icon-calendar"></span>
+                <span>Tersedia sepanjang tahun</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon-ticket"></span>
+                <span>Konfirmasi instan</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon-cancel"></span>
+                <span>Pembatalan gratis hingga 7 hari sebelum keberangkatan</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="help-card">
+            <h3>Butuh Bantuan?</h3>
+            <p>Tim kami siap membantu Anda dengan pertanyaan apapun tentang perjalanan ini.</p>
+            <button class="btn btn-secondary btn-block">
+              <span class="icon-chat"></span> Chat dengan Kami
+            </button>
+            <div class="help-contact">
+              <p>Atau hubungi kami di:</p>
+              <a href="tel:+6281234567890">+62 812-3456-7890</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-company">
+          <h3>Weesata</h3>
+          <p>Platform digital untuk eksplorasi dan pemesanan wisata lokal di Indonesia.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="icon-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-link-group">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Destinasi Wisata</a></li>
+              <li><a href="#">Panduan Wisata</a></li>
+              <li><a href="#">Program Afiliasi</a></li>
+              <li><a href="#">Mitra Bisnis</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Bantuan</h4>
+            <ul>
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontak Kami</a></li>
+              <li><a href="#">Pembatalan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Weesata.com. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages/detail.js"></script>
+</body>
+</html>

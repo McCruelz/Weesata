@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Weesata</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/dashboard.css">
+  <link rel="stylesheet" href="styles/pages/checkout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-fixed">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Weesata</h1>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="search.html">Destinasi</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Bantuan</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-profile" id="userProfileMenu">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="User Profile">
+            <span>Budi Santoso</span>
+            <span class="icon-dropdown"></span>
+            
+            <div class="dropdown-menu">
+              <a href="dashboard.html" class="dropdown-item active">
+                <span class="icon-dashboard"></span>
+                Dashboard
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-ticket"></span>
+                Tiket Saya
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-heart"></span>
+                Wishlist
+              </a>
+              <a href="#" class="dropdown-item">
+                <span class="icon-settings"></span>
+                Pengaturan
+              </a>
+              <a href="index.html" class="dropdown-item logout">
+                <span class="icon-logout"></span>
+                Keluar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Page Content -->
+  <main class="checkout-page">
+    <div class="container">
+      <div class="checkout-header">
+        <h1>Checkout</h1>
+        <div class="checkout-steps">
+          <div class="step active">
+            <div class="step-number">1</div>
+            <span class="step-name">Detail Pesanan</span>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <span class="step-name">Pembayaran</span>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <span class="step-name">Konfirmasi</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="checkout-content">
+        <!-- Left Column: Form -->
+        <div class="checkout-form-container">
+          <div class="form-section">
+            <h2>Informasi Pemesan</h2>
+            <form id="bookingForm">
+              <div class="form-group">
+                <label for="fullName">Nama Lengkap</label>
+                <input type="text" id="fullName" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" id="phone" required>
+              </div>
+              
+              <h3 class="mt-4">Informasi Peserta</h3>
+              <p class="form-note">Pastikan informasi yang dimasukkan sesuai dengan KTP/Paspor</p>
+              
+              <div id="participants">
+                <div class="participant-form">
+                  <h4>Peserta 1</h4>
+                  <div class="form-group">
+                    <label for="participant1Name">Nama Lengkap</label>
+                    <input type="text" id="participant1Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="participant1Id">Nomor KTP/Paspor</label>
+                    <input type="text" id="participant1Id" required>
+                  </div>
+                </div>
+                
+                <div class="participant-form">
+                  <h4>Peserta 2</h4>
+                  <div class="form-group">
+                    <label for="participant2Name">Nama Lengkap</label>
+                    <input type="text" id="participant2Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="participant2Id">Nomor KTP/Paspor</label>
+                    <input type="text" id="participant2Id" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="specialRequests">Permintaan Khusus (opsional)</label>
+                <textarea id="specialRequests" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          
+          <div class="form-section payment-section" id="paymentSection" style="display: none;">
+            <h2>Metode Pembayaran</h2>
+            <div class="payment-options">
+              <div class="payment-method">
+                <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer" checked>
+                <label for="bankTransfer" class="payment-label">
+                  <div class="payment-icon">
+                    <img src="images/bank-transfer.svg" alt="Transfer Bank">
+                  </div>
+                  <span>Transfer Bank</span>
+                </label>
+              </div>
+              
+              <div class="payment-method">
+                <input type="radio" id="eWallet" name="paymentMethod" value="eWallet">
+                <label for="eWallet" class="payment-label">
+                  <div class="payment-icon">
+                    <img src="images/e-wallet.svg" alt="E-Wallet">
+                  </div>
+                  <span>E-Wallet</span>
+                </label>
+              </div>
+              
+              <div class="payment-method">
+                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+                <label for="creditCard" class="payment-label">
+                  <div class="payment-icon">
+                    <img src="images/credit-card.svg" alt="Kartu Kredit">
+                  </div>
+                  <span>Kartu Kredit</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="payment-details" id="bankTransferDetails">
+              <h3>Detail Transfer Bank</h3>
+              <div class="bank-accounts">
+                <div class="bank-account">
+                  <img src="images/bank-bca.svg" alt="BCA">
+                  <div class="account-details">
+                    <p class="account-name">PT Weesata Indonesia</p>
+                    <p class="account-number">8720456789</p>
+                  </div>
+                  <button class="btn btn-sm btn-secondary copy-btn" data-clipboard-text="8720456789">Salin</button>
+                </div>
+                
+                <div class="bank-account">
+                  <img src="images/bank-mandiri.svg" alt="Mandiri">
+                  <div class="account-details">
+                    <p class="account-name">PT Weesata Indonesia</p>
+                    <p class="account-number">1370056789012</p>
+                  </div>
+                  <button class="btn btn-sm btn-secondary copy-btn" data-clipboard-text="1370056789012">Salin</button>
+                </div>
+              </div>
+              <div class="payment-deadline">
+                <p>Mohon selesaikan pembayaran sebelum:</p>
+                <p class="deadline">Selasa, 15 Juni 2025 | 23:59 WIB</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-section confirmation-section" id="confirmationSection" style="display: none;">
+            <div class="success-message">
+              <div class="success-icon">✓</div>
+              <h2>Pembayaran Berhasil!</h2>
+              <p>Terima kasih telah memesan dengan Weesata. Detail perjalanan Anda telah dikirim ke email.</p>
+              
+              <div class="e-ticket">
+                <div class="ticket-header">
+                  <h3>E-Ticket</h3>
+                  <div class="booking-id">Booking ID: WE25061500123</div>
+                </div>
+                <div class="ticket-qr">
+                  <div class="qr-placeholder">
+                    <div class="qr-box"></div>
+                    <p>Scan QR Code ini saat check-in</p>
+                  </div>
+                </div>
+                <div class="ticket-details">
+                  <div class="ticket-item">
+                    <span class="label">Destinasi:</span>
+                    <span class="value">Raja Ampat, Papua Barat</span>
+                  </div>
+                  <div class="ticket-item">
+                    <span class="label">Paket:</span>
+                    <span class="value">Standar - 3 hari 2 malam</span>
+                  </div>
+                  <div class="ticket-item">
+                    <span class="label">Tanggal:</span>
+                    <span class="value">15 - 17 Juni 2025</span>
+                  </div>
+                  <div class="ticket-item">
+                    <span class="label">Peserta:</span>
+                    <span class="value">2 orang</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="next-steps">
+                <h3>Langkah Selanjutnya:</h3>
+                <ol>
+                  <li>Cek email untuk detail e-ticket lengkap</li>
+                  <li>Simpan e-ticket sebagai bukti pemesanan</li>
+                  <li>Persiapkan dokumen perjalanan yang diperlukan</li>
+                  <li>Hubungi kami jika ada pertanyaan</li>
+                </ol>
+              </div>
+              
+              <div class="confirmation-actions">
+                <a href="dashboard.html" class="btn btn-primary">Lihat Perjalanan Saya</a>
+                <a href="index.html" class="btn btn-secondary">Kembali ke Beranda</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Summary -->
+        <div class="checkout-summary">
+          <div class="summary-card">
+            <h2>Ringkasan Pesanan</h2>
+            
+            <div class="booking-info">
+              <img src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg" alt="Raja Ampat" class="destination-thumbnail">
+              <div class="booking-details">
+                <h3>Raja Ampat</h3>
+                <p class="booking-location">Papua Barat</p>
+                <div class="booking-package">Paket: Standar (3 hari 2 malam)</div>
+                <div class="booking-date">15 - 17 Juni 2025</div>
+                <div class="booking-guests">2 Orang</div>
+              </div>
+            </div>
+            
+            <div class="price-breakdown">
+              <div class="price-item">
+                <span class="item-name">Paket Standar</span>
+                <span class="item-value">Rp 2.500.000 x 2</span>
+              </div>
+              <div class="price-item">
+                <span class="item-name">Biaya Layanan</span>
+                <span class="item-value">Rp 150.000</span>
+              </div>
+              <div class="price-item discount">
+                <span class="item-name">Diskon Promo</span>
+                <span class="item-value">- Rp 150.000</span>
+              </div>
+              <div class="price-total">
+                <span class="total-label">Total</span>
+                <span class="total-value">Rp 5.000.000</span>
+              </div>
+            </div>
+            
+            <div class="promo-code">
+              <input type="text" placeholder="Kode Promo">
+              <button class="btn btn-secondary">Terapkan</button>
+            </div>
+            
+            <div class="checkout-actions">
+              <button class="btn btn-primary btn-block" id="continueToPayment">Lanjut ke Pembayaran</button>
+              <button class="btn btn-success btn-block" id="processPayment" style="display: none;">Bayar Sekarang</button>
+            </div>
+            
+            <div class="summary-note">
+              <p>Dengan melanjutkan, Anda menyetujui <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a> kami.</p>
+            </div>
+          </div>
+          
+          <div class="assistance-box">
+            <h3>Butuh Bantuan?</h3>
+            <p>Hubungi Customer Service kami</p>
+            <a href="#" class="contact-link">
+              <span class="icon-whatsapp"></span> +62 812-3456-7890
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-company">
+          <h3>Weesata</h3>
+          <p>Platform digital untuk eksplorasi dan pemesanan wisata lokal di Indonesia.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="icon-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-link-group">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Destinasi Wisata</a></li>
+              <li><a href="#">Panduan Wisata</a></li>
+              <li><a href="#">Program Afiliasi</a></li>
+              <li><a href="#">Mitra Bisnis</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-link-group">
+            <h4>Bantuan</h4>
+            <ul>
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontak Kami</a></li>
+              <li><a href="#">Pembatalan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Weesata.com. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/pages/checkout.js"></script>
+</body>
+</html>
